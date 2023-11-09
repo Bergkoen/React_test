@@ -1,0 +1,132 @@
+/* ---RESETS */
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+.img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* ---ROOT VARS */
+
+:root {
+  --bg: #e0e8ff;
+  --bgSecondary: #f7f9ff;
+  --primary: #382ae1;
+  --shadow: 0px 40px 40px -20px rgba(13, 48, 189, 0.15);
+  --headings: #1f2e55;
+  --subText: #717fa6;
+  --hover: #766cf1;
+  --font: "Red Hat Display", sans-serif;
+}
+
+/* ---MAIN STYLES */
+
+body {
+  font-family: var(--font);
+  min-height: 100vh;
+  background: var(--bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: 90vw;
+  max-width: 450px;
+  border-radius: 20px;
+  background: white;
+  box-shadow: var(--shadow);
+}
+
+/* ---HERO COMPONENT */
+
+.illustration {
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+}
+
+.main-content {
+  padding: 45px 48px 48px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 28px;
+
+  @media only screen and (max-width: 500px) {
+    padding: 32px;
+  }
+}
+
+/* ---HEADER COMPONENT */
+h1 {
+  text-align: center;
+  text-transform: capitalize;
+  color: #1f2e55;
+  font-size: 28px;
+  font-weight: 900;
+}
+
+/* ---PLANS COMPONENT */
+
+/* ---BUTTONS COMPONENT */
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .add-btn {
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    border-radius: 11px;
+    border: none;
+    background-color: var(--primary);
+    text-align: center;
+    color: white;
+    font-family: var(--font);
+    font-size: 0.938rem;
+    font-weight: 800;
+    box-shadow: 0px 20px 20px 0px rgba(56, 42, 225, 0.19);
+    cursor: pointer;
+    transition: 250ms ease;
+
+    &:hover {
+      background-color: var(--hover);
+    }
+  }
+
+  .cancel-btn {
+    display: block;
+    width: fit-content;
+    padding: 15px 0;
+    border-radius: 11px;
+    border: none;
+    background-color: transparent;
+    text-align: center;
+    color: var(--subText);
+    font-family: var(--font);
+    font-size: 0.938rem;
+    font-weight: 900;
+    cursor: pointer;
+    transition: 250ms ease;
+
+    &:hover {
+      color: red;
+    }
+  }
+}
